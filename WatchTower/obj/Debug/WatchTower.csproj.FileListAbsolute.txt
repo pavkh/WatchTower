@@ -1,0 +1,10 @@
+D:\pavel\PLAYGROUND\WatchTower\WatchTower\obj\Debug\ResolveAssemblyReference.cache
+D:\pavel\PLAYGROUND\WatchTower\WatchTower\obj\Debug\WatchTower.MainWindow.resources
+D:\pavel\PLAYGROUND\WatchTower\WatchTower\obj\Debug\WatchTower.Properties.Resources.resources
+D:\pavel\PLAYGROUND\WatchTower\WatchTower\obj\Debug\WatchTower.csproj.GenerateResource.Cache
+D:\pavel\PLAYGROUND\WatchTower\WatchTower\bin\Debug\WatchTower.exe
+D:\pavel\PLAYGROUND\WatchTower\WatchTower\bin\Debug\WatchTower.pdb
+D:\pavel\PLAYGROUND\WatchTower\WatchTower\obj\Debug\WatchTower.exe
+D:\pavel\PLAYGROUND\WatchTower\WatchTower\obj\Debug\WatchTower.pdb
+D:\pavel\PLAYGROUND\WatchTower\WatchTower\obj\Debug\WatchTower.Element.resources
+D:\pavel\PLAYGROUND\WatchTower\WatchTower\bin\Debug\WatchTower.exe.config
