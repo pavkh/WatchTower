@@ -63,7 +63,7 @@ namespace WatchTower
             dTable.Columns.Add("port");
             dTable.Columns.Add("status",typeof(bool));
             
-            int i = 0;
+           
             foreach (string str in fileRows)
             {
                 string[] stringParts = str.Split(delimiterChars);
@@ -86,6 +86,13 @@ namespace WatchTower
         }
         public void setStatus(int number, bool status){
             this.dTable.Rows[number]["status"] = status;
+            
+            if (status == false)
+            {
+                this.notifyIcon1.BalloonTipTitle = "Alert!";
+                this.notifyIcon1.BalloonTipText = this.dTable.Rows[number]["Name"].ToString() + " is not responding!";
+                this.notifyIcon1.ShowBalloonTip(5000);
+            }
         
         }
         public void performStepM()
@@ -97,6 +104,28 @@ namespace WatchTower
                 this.progressBar1.Value = 0;
             }
 
+        }
+
+
+        private void notifyIcon1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                switch (this.Visible)
+                {
+                    case true:
+                        this.Visible = false;
+                        break;
+                    case false:
+                        this.Visible = true;
+                        break;
+                }
+            }
+        }
+
+        private void Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

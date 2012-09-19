@@ -6,5 +6,4 @@ D:\pavel\PLAYGROUND\WatchTower\WatchTower\bin\Debug\WatchTower.exe
 D:\pavel\PLAYGROUND\WatchTower\WatchTower\bin\Debug\WatchTower.pdb
 D:\pavel\PLAYGROUND\WatchTower\WatchTower\obj\Debug\WatchTower.exe
 D:\pavel\PLAYGROUND\WatchTower\WatchTower\obj\Debug\WatchTower.pdb
-D:\pavel\PLAYGROUND\WatchTower\WatchTower\obj\Debug\WatchTower.Element.resources
 D:\pavel\PLAYGROUND\WatchTower\WatchTower\bin\Debug\WatchTower.exe.config
