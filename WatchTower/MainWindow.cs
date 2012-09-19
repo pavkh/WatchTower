@@ -21,6 +21,7 @@ namespace WatchTower
         public delegate void PerformStep();
         public StatusSet statusSet;
         public PerformStep performStep;
+        public DataTable dTable;
         private void MainWindow_Load(object sender, EventArgs e)
         {
             this.progressBar1.Maximum = Properties.Settings.Default.Timer;
@@ -53,17 +54,28 @@ namespace WatchTower
                 MessageBox.Show("Файл настроек пуст");
                 this.Close();
             }
-            Element[] elem = new Element[fileRows.Count];
+            this.dTable = new DataTable();
+            BindingSource bSource = new BindingSource();
+            bSource.DataSource = dTable;
+            this.listGridView.DataSource = bSource;
+            dTable.Columns.Add("Name");
+            dTable.Columns.Add("IPAdress");
+            dTable.Columns.Add("port");
+            dTable.Columns.Add("status",typeof(bool));
+            
             int i = 0;
             foreach (string str in fileRows)
             {
-                
                 string[] stringParts = str.Split(delimiterChars);
-                elem[i] = new Element(stringParts[0], stringParts[1]);
-                elem[i].Location = new Point(0, elem[i].Height*i);
-                panel1.Controls.Add(elem[i]);
-                i++;
+                DataRow dRow = dTable.NewRow();
+                dRow["Name"] = stringParts[0];
+                dRow["IPAdress"] = stringParts[1];
+                dRow["port"] = stringParts[2];
+                dTable.Rows.Add(dRow);
+
+                
             }
+            
             Watcher watcher = new Watcher(fileRows);
             watcher.parent = this;
             Thread watchDuty = new Thread(new ThreadStart(watcher.watch));
@@ -73,9 +85,7 @@ namespace WatchTower
             
         }
         public void setStatus(int number, bool status){
-            Element[] elem = this.panel1.Controls.OfType<Element>().ToArray();
-            
-            elem[number].status.Text = status.ToString();
+            this.dTable.Rows[number]["status"] = status;
         
         }
         public void performStepM()
