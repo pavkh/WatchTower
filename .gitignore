@@ -50,3 +50,4 @@ _ReSharper*/
 # Office Temp Files
 ~$*
 bin
+/WatchTower/bin
