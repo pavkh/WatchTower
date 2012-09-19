@@ -50,3 +50,9 @@ _ReSharper*/
 
 # Office Temp Files
 ~$*
+/WatchTower/obj/Debug/WatchTower.pdb
+/WatchTower/obj/Debug/WatchTower.Properties.Resources.resources
+/WatchTower/obj/Debug/WatchTower.csproj.FileListAbsolute.txt
+/WatchTower/obj/Debug/WatchTower.csproj.GenerateResource.Cache
+/WatchTower/obj/Debug/WatchTower.exe
+/WatchTower/obj/Debug/WatchTower.MainWindow.resources
