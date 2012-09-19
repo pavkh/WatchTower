@@ -4,6 +4,8 @@
 
 #Visual Studio files
 *.[Oo]bj
+obj
+Obj
 *.exe
 *.pdb
 *.user
