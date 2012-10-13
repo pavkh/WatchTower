@@ -6,6 +6,7 @@ using System.Net.Sockets;
 using System.Timers;
 using System.Windows.Forms;
 using System.Net.NetworkInformation;
+
 namespace WatchTower
 {
     class Watcher
@@ -54,8 +55,7 @@ namespace WatchTower
                     PingReply reply = pPing.Send(stringParts[1], timeout, buffer, pOptions);
                     if (reply.Status == IPStatus.Success)
                     {
-
-                        
+                                     
                         mainWindow.Invoke(mainWindow.statusSet, i,true);
                     }
                     else
@@ -88,6 +88,7 @@ namespace WatchTower
                 this._ticktack.Start();
                
             }
+            mainWindow.playing = false;
             
         }
         public void watch()

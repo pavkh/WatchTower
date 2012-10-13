@@ -3,10 +3,13 @@
   <Profiles />
   <Settings>
     <Setting Name="Timer" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">10000</Value>
+      <Value Profile="(Default)">30000</Value>
     </Setting>
     <Setting Name="PingTimeout" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">1000</Value>
+    </Setting>
+    <Setting Name="sound" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
     </Setting>
   </Settings>
 </SettingsFile>
